@@ -1,0 +1,30 @@
+# Documentation for model and training config
+# out_clases: Number of segmentation classes
+# dimensions: Image dimensions
+# num_encoding_blocks: Number of encoding blocks for unet
+# out_channels_first_layer: Number of out channels from first layer
+# activation: Activation function, only tested with ReLU and Sigmoid. 
+#Go to https://pytorch.org/docs/stable/nn.html#non-linear-activations-weighted-sum-nonlinearity
+# for more information about activation functions.
+
+# num_epochs: number of training epochs
+# training_split: Is the dataset proportion used for training e.g. 0.7 is 70% used for training
+# and 30% used for validation
+# training_data_path: File path used to save  model weights and epochs metrics
+# training_data_path: File path used to read model weights and epochs metrics  
+# landmarks_path: File path used to save and read histogram standardization weights
+
+model:
+  out_classes: 2
+  dimensions: 3
+  num_encoding_blocks: 4
+  out_channels_first_layer: 8
+  activation: ReLU
+
+training:
+  num_epochs: 1
+  training_split_ratio: 0.7
+  training_data_path: config/whole_image_state_dict.pth
+  training_weights_path: config/whole_image_state_dict_80_epochs_64.pth
+  landmarks_path: config/landmarks.npy
+  

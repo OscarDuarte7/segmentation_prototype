@@ -1,0 +1,8 @@
+torch==1.12.1
+torchio==0.18.83
+numpy==1.22.4
+unet==0.7.7
+tqdm==4.64.1
+PyYAML==6.0
+schema==0.7.5
+click==8.1.3
