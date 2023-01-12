@@ -27,11 +27,8 @@ def train_model(images_path, labels_path):
 
     random.seed(seed)
     torch.manual_seed(seed)
-    num_workers = multiprocessing.cpu_count()
 
-    ###
 
-    # Dataset
     config = {}
 
     ###
